@@ -1,0 +1,30 @@
+<div *ngIf="faculties" class="container">
+  <div class="row justify-content-center">
+    <div
+      *ngFor="let faculty of faculties"
+      class="card col-3 p-0 m-2 d-flex flex-grow-1"
+    >
+      <!-- ! In Image Element src and other attribute are specify in the Property Bidding -->
+      <img
+        [src]="faculty.FacultyImage"
+        class="card-img-top"
+        [alt]="faculty.FacultyName"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ faculty.FacultyName }}</h5>
+        <p class="card-text">{{ faculty.FacultyAbout }}</p>
+        <a [routerLink]="'/faculty/' + faculty.id" class="btn btn-primary"
+          >More</a
+        >
+        <a class="ms-2 btn btn-danger" (click)="delete(faculty.id)">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ! If when data is not load than that part will be rendered -->
+<div *ngIf="!faculties">
+  <h3 class="d-flex justify-content-center align-items-center myLoading">
+    Loading...
+  </h3>
+</div>

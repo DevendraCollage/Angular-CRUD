@@ -1,0 +1,13 @@
+<div class="card col-3 p-0 m-2 d-flex flex-grow-1" style="width: 18rem">
+  <img [src]="data.FacultyImage" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ data.FacultyName }}</h5>
+    <p class="card-text">
+      {{ data.FacultyAbout }}
+    </p>
+    <a class="btn btn-success me-2" routerLink="/faculty/edit/{{ data.id }}"
+      >Edit</a
+    >
+    <a class="btn btn-danger" (click)="delete(data.id)">Delete</a>
+  </div>
+</div>

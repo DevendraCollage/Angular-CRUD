@@ -1,0 +1,47 @@
+<div class="container">
+  <!-- ! This where i also use the conditional rendering for the heading -->
+  <h2 class="mt-3 mb-4" *ngIf="id == 0">Insert Form For Faculty</h2>
+  <h2 class="mt-3 mb-4" *ngIf="id > 0">Update Form For Faculty</h2>
+  <form #empForm="ngForm" (ngSubmit)="submit(empForm.value)">
+    <div class="mb-3">
+      <label class="form-label">Faculty Name</label>
+      <input
+        type="text"
+        name="FacultyName"
+        class="form-control"
+        id="exampleInputEmail1"
+        [(ngModel)]="data.FacultyName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Faculty Image</label
+      >
+      <input
+        type="text"
+        name="FacultyImage"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="data.FacultyImage"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Faculty Description</label
+      >
+      <input
+        type="text"
+        type="text"
+        name="FacultyAbout"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="data.FacultyAbout"
+      />
+    </div>
+    <!-- ! This is where i use the conditional rendering for the button -->
+    <button type="submit" *ngIf="id == 0" class="btn btn-primary">
+      Insert
+    </button>
+    <button type="submit" *ngIf="id > 0" class="btn btn-success">Update</button>
+  </form>
+</div>

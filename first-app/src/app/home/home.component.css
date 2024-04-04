@@ -1,0 +1,34 @@
+/* This is my heading of the home component */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 3s ease-in-out;
+    animation-fill-mode: forwards;
+    height: 65vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* This is my small heading which is shows purpose of this app */
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 3s ease-in-out;
+    animation-fill-mode: forwards;
+    height: 156px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* This is animation of my name on the home */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      color: black;
+    }
+}

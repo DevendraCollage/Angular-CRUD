@@ -1,0 +1,7 @@
+.container {
+    height: 75vh;
+}
+
+.button-container {
+    flex-direction: row;
+}
